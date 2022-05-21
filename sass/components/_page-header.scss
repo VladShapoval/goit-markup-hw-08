@@ -1,0 +1,315 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    height: 80px;
+
+    @media screen and (max-width: $desktop) {
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+}
+
+.header-nav {
+    width: 100%;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width: $tablet) {
+        display: none;
+        z-index: 10;
+
+        &.is-open {
+            display: block;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.site-nav {
+    @media screen and (max-width: $tablet) {
+        margin-bottom: 150px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        margin-left: 88px;
+    }
+}
+
+.site-nav__item {
+    @media screen and (min-width: $tablet) {
+        margin-left: 50px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 50px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.site-nav__link {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: $tablet) {
+        position: relative;
+        display: block;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+        padding-left: 40px;
+        letter-spacing: 0.02em;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        .site-nav__item:last-child & {
+            padding-bottom: 0;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &::after {
+        @media screen and (min-width: $tablet) {
+            content: '';
+            position: absolute;
+            display: block;
+
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+
+            opacity: 0;
+
+            background-color: $accent-color;
+            border-radius: 2px;
+
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+    &:hover::after,
+    &:focus::after {
+        opacity: 1;
+    }
+}
+
+.site-nav--current {
+    color: $accent-color;
+    position: relative;
+
+    &::before {
+        @media screen and (min-width: $tablet) {
+            content: '';
+            position: absolute;
+            display: block;
+
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+
+            background-color: $accent-color;
+            border-radius: 2px;
+
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
+
+.address {
+    margin-left: auto;
+
+    @media screen and (max-width: $tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin: 0;
+    }
+}
+
+.address__item {
+    display: flex;
+
+    color: $primery-text-color;
+    text-decoration: none;
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    fill: #757575;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        &:last-child {
+            font-size: 34px;
+            line-height: 1.18;
+            margin-bottom: 32px;
+        }
+
+        &:first-child {
+            font-size: 24px;
+            line-height: 1.17;
+            margin-bottom: 65px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 30px;
+        font-size: 14px;
+        line-height: 1.14;
+
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.address__icon {
+    display: block;
+    margin-right: 8px;
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+
+    .address__item:hover &,
+    .address__item:focus & {
+        fill: currentColor;
+    }
+}
+
+.social-network {
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.social-network__items {
+    @media screen and (max-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 40px;
+    }
+}
+
+.social-network__link {
+    @media screen and (max-width: $tablet) {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        color: $accent-color;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+
+        .social-network__item:last-child &::after {
+            display: none;
+        }
+
+        &::after {
+            content: '';
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+            transform: rotate(90deg);
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.header-burger {
+    display: none;
+
+    @media screen and (max-width: $tablet) {
+        display: block;
+    }
+}
+
+.header-burger__button {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    position: relative;
+    z-index: 10;
+}
+.header-burger__icon:hover,
+.header-burger__icon:focus {
+    fill: $accent-color;
+}
+
+.header-burger__button.header-burger__button--is-open .header-burger__close {
+    display: block;
+}
+
+.header-burger__button.header-burger__button--is-open .header-burger__menu {
+    display: none;
+}
+
+.header-burger__close {
+    display: none;
+}

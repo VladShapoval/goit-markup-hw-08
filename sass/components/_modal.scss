@@ -1,0 +1,315 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    padding: 93px 15px 0;
+    overflow-y: scroll;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+        padding: 208px 159px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 221px 536px 0;
+    }
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50% -50%) scale(0.9);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-height: 581;
+
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: $desktop) {
+        max-width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 528px;
+    }
+}
+
+.modal__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    background-color: #fff;
+
+    width: 30px;
+    height: 30px;
+
+    &:hover,
+    &:focus {
+        background-color: #fff;
+    }
+}
+
+.modal__close {
+    fill: #000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__button:hover &,
+    .modal__button:focus & {
+        fill: $accent-color;
+    }
+}
+
+.form-modal {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.form-modal__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    color: $title-text-color;
+
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    @media screen and (max-width: $desktop) {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+.form-modal--padding {
+    padding-left: 41px;
+    padding-right: 39px;
+}
+
+.form-modal__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-modal__label {
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: #757575;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        width: 100%;
+    }
+}
+
+.form-modal__input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    height: 40px;
+    padding-left: 41px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .form-modal__field:hover &,
+    .form-modal__field:focus-within & {
+        border-color: #2196f3;
+        outline: none;
+    }
+}
+
+.form-modal__logo {
+    position: absolute;
+    left: 12px;
+    top: 28px;
+    fill: #000;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .form-modal__field:hover &,
+    .form-modal__field:focus-within & {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: 40px;
+    }
+}
+
+.form-modal__textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.contract {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    height: 24px;
+    align-items: center;
+
+    padding-left: 52px;
+    padding-right: 51px;
+    margin-bottom: 30px;
+}
+
+.contract__label {
+    display: flex;
+    align-items: center;
+    height: 24px;
+
+    color: $primery-text-color;
+
+    margin: 0px;
+    font-size: 14px;
+    line-height: 1.71;
+
+    @media screen and (max-width: $desktop) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+}
+
+.contract__checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.contract__box {
+    position: relative;
+
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 2px solid $title-text-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .contract__checkbox:checked ~ & {
+        background-color: $accent-color;
+        border-color: $accent-color;
+
+        .contract__checkbox:checked:hover ~ &,
+        .checontract__checkbox:checked:focus ~ & {
+            color: $accent-color;
+            fill: #fff;
+        }
+    }
+}
+
+.contract__conditions {
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+
+    @media screen and (max-width: $desktop) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+}
+
+.contract__icon {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    fill: #fff;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contract__conditions {
+    margin-left: 2px;
+    font-style: normal;
+    line-height: 1.71;
+    color: $accent-color;
+    text-decoration-line: underline;
+}
+
+.modal-submit {
+    display: block;
+    width: 200px;
+    height: 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+    border: 0px;
+
+    color: #fff;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
