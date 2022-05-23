@@ -94,15 +94,12 @@
 }
 
 .form-modal {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
 }
 
 .form-modal__title {
     margin-top: 0;
     margin-bottom: 12px;
-    padding-left: 40px;
-    padding-right: 40px;
 
     color: $title-text-color;
 
@@ -114,11 +111,6 @@
         font-size: 20px;
         line-height: 1.5;
     }
-}
-
-.form-modal--padding {
-    padding-left: 41px;
-    padding-right: 39px;
 }
 
 .form-modal__field {
@@ -207,8 +199,6 @@
     height: 24px;
     align-items: center;
 
-    padding-left: 52px;
-    padding-right: 51px;
     margin-bottom: 30px;
 }
 
@@ -239,7 +229,7 @@
 .contract__box {
     position: relative;
 
-    margin-right: 8px;
+    margin-right: 5px;
     width: 16px;
     height: 15px;
     border-radius: 2px;
@@ -282,8 +272,7 @@
 }
 
 .contract__conditions {
-    margin-left: 2px;
-    font-style: normal;
+    // margin-left: 2px;
     line-height: 1.71;
     color: $accent-color;
     text-decoration-line: underline;

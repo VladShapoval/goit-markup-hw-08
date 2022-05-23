@@ -6,6 +6,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 header {
   border-bottom: 1px solid #ececec;
 }
@@ -69,7 +73,6 @@ footer {
 }
 
 .header {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +82,12 @@ footer {
   height: 80px;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     -webkit-box-pack: justify;
@@ -86,12 +95,7 @@ footer {
             justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 100%;
   }
-}
-
-.header-nav {
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,6 +106,7 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
   }
 }
 
@@ -113,7 +118,8 @@ footer {
     top: 0;
     left: 0;
     background-color: #ffffff;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding-top: 48px;
     padding-bottom: 48px;
   }
@@ -281,6 +287,8 @@ footer {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.16;
   fill: #757575;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -640,8 +648,6 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 58px;
-    padding-bottom: 62px;
   }
 }
 
@@ -687,7 +693,7 @@ footer {
           flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .address-nav {
     margin-bottom: 60px;
   }
@@ -1041,15 +1047,12 @@ footer {
 }
 
 .form-modal {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px;
 }
 
 .form-modal__title {
   margin-top: 0;
   margin-bottom: 12px;
-  padding-left: 40px;
-  padding-right: 40px;
   color: #212121;
   font-size: 20px;
   line-height: 1.15;
@@ -1061,11 +1064,6 @@ footer {
     font-size: 20px;
     line-height: 1.5;
   }
-}
-
-.form-modal--padding {
-  padding-left: 41px;
-  padding-right: 39px;
 }
 
 .form-modal__field {
@@ -1187,8 +1185,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 52px;
-  padding-right: 51px;
   margin-bottom: 30px;
 }
 
@@ -1222,7 +1218,7 @@ footer {
 
 .contract__box {
   position: relative;
-  margin-right: 8px;
+  margin-right: 5px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
@@ -1267,8 +1263,6 @@ footer {
 }
 
 .contract__conditions {
-  margin-left: 2px;
-  font-style: normal;
   line-height: 1.71;
   color: #2196f3;
   -webkit-text-decoration-line: underline;
