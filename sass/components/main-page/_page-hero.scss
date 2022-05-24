@@ -4,8 +4,8 @@
     margin-right: auto;
     height: 400px;
     background-position: center;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), (rgba(47, 48, 58, 0.8))),
-        url('./../images/header480px.jpg');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), (rgba(47, 48, 58, 0.4))),
+        url('./../images/header-480.jpg');
     background-color: #c4c4c4;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,26 +22,26 @@
     }
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.8), (rgba(47, 48, 58, 0.8))),
-            url('./../images/header@2x480px.jpg');
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), (rgba(47, 48, 58, 0.4))),
+            url('./../images/header@2x-480.jpg');
     }
 
     @media screen and (min-width: $tablet) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.8), (rgba(47, 48, 58, 0.8))),
-            url('./../images/header768px.jpg');
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), (rgba(47, 48, 58, 0.4))),
+            url('./../images/header-768.jpg');
     }
 
     @media screen and (min-width: $desktop) {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.8), (rgba(47, 48, 58, 0.8))),
-            url('./../images/header1600px.jpg');
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), (rgba(47, 48, 58, 0.4))),
+            url('./../images/header-1200.jpg');
         height: 600px;
     }
 
     @media screen and (min-width: $tablet) {
         & {
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.8), (rgba(47, 48, 58, 0.8))),
-                    url('./../images/header@2x768px.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), (rgba(47, 48, 58, 0.4))),
+                    url('./../images/header@2x-768.jpg');
             }
         }
     }
@@ -49,8 +49,8 @@
     @media screen and (min-width: $desktop) {
         & {
             @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.8), (rgba(47, 48, 58, 0.8))),
-                    url('./../images/header@2x1600px.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), (rgba(47, 48, 58, 0.4))),
+                    url('./../images/header@2x-1200.jpg');
                 height: 600px;
             }
         }

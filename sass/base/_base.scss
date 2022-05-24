@@ -12,6 +12,10 @@ body {
 
 header {
     border-bottom: 1px solid #ececec;
+
+    &.additional {
+        border-bottom: none;
+    }
 }
 
 .container {
