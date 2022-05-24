@@ -561,7 +561,6 @@ footer {
 
 @media screen and (min-width: 1200px) {
   .portfolio-items__item {
-    width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -613,6 +612,12 @@ footer {
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-items__overlay {
+    padding: 49px 24px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
